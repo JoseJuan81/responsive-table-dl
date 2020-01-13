@@ -73,12 +73,9 @@ export default {
 	width: 100%;
 }
 
-.columns-movil {
-	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
-}
-
+.columns-movil,
 .table-movil {
 	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
 }
 </style>
