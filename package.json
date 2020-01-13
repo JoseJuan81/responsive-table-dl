@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "test": "cypress run --record --key 550e45d2-f4cf-49be-848a-e20cf0573c25",
+    "test": "cypress run",
     "cy:verify": "cypress verify",
     "cy:open": "cypress open"
   },
