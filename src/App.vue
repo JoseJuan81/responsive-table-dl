@@ -1,15 +1,18 @@
 <template>
   <div id="app" data-cy="app">
 	<ResponsiveTable
+		class="responsive-table"
+		:break-point="770"
 		:columns="columns"
 		:rows="rows"
 	>
 		<template v-slot:caption><span>Este es el slot del caption</span></template>
 		<template v-slot:row="{ row }">
-			<td>{{row.name}}</td>
-			<td>{{row.lastName}}</td>
-			<td>{{row.age}}</td>
-			<td>{{row.gender}}</td>
+			<td class="cell1">{{row.name}}</td>
+			<td class="cell2">{{row.lastName}}</td>
+			<td class="cell3">{{row.age}}</td>
+			<td class="cell4">{{row.gender}}</td>
+			<td class="actions">Acciones</td>
 		</template>
 		<template v-slot:footer>
 			<tr>
@@ -26,11 +29,11 @@ import ResponsiveTable from '@/components/table.vue';
 function data() {
 	return {
 		columns: [
-			{ id: 1, title: 'Nombre' },
-			{ id: 2, title: 'Apellido' },
-			{ id: 3, title: 'Edad' },
-			{ id: 4, title: 'Sexo' },
-			{ id: 5, title: 'Acciones' },
+			{ id: 1, title: 'Nombre', movil: true },
+			{ id: 2, title: 'Apellido', movil: false },
+			{ id: 3, title: 'Edad', movil: true },
+			{ id: 4, title: 'Sexo', movil: false },
+			{ id: 5, title: 'Acciones', movil: true },
 		],
 		rows: [
 			{
@@ -69,5 +72,30 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+.cell1 {
+	grid-area: cell1;
+}
+.cell2 {
+	grid-area: cell2;
+}
+.cell3 {
+	grid-area: cell3;
+}
+.cell4 {
+	grid-area: cell4;
+}
+.actions {
+	grid-area: actions;
+}
+
+.responsive-table {
+
+	.table-movil {
+		grid-template-areas:
+			"cell1 cell3 actions"
+			"cell2 cell4 ......."
+	}
 }
 </style>

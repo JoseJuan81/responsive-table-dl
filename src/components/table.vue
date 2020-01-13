@@ -1,18 +1,18 @@
 <template>
-	<table class="responsible-table">
+	<table class="responsible-table-main">
 		<caption data-cy="table-caption">
 			<slot name="caption"></slot>
 		</caption>
 		<thead data-cy="table-head">
-			<tr>
-				<th v-for="(col, indexCol) in columns" :key="indexCol">{{col.title}}</th>
+			<tr :class="{ 'columns-movil': breakIt }">
+				<th v-for="(col, indexCol) in filterColumns" :key="indexCol">{{col.title}}</th>
 			</tr>
 		</thead>
-		<tbody  data-cy="table-body">
+		<tbody data-cy="table-body">
 			<tr
 				v-for="(row, indexRow) in rows"
 				:key="indexRow"
-				class="grid"
+				:class="{ 'table-movil': breakIt }"
 			>
 				<slot name="row" :row="row" :index="indexRow"></slot>
 			</tr>
@@ -23,9 +23,39 @@
 	</table>
 </template>
 <script>
+
+function created() {
+	this.breakIt = window.innerWidth <= this.breakPoint;
+	window.addEventListener('resize', () => {
+		this.breakIt = window.innerWidth <= this.breakPoint;
+	});
+}
+
+function filterColumns() {
+	if (this.breakIt) {
+		return this.columns.filter(c => c.movil);
+	}
+	return this.columns;
+}
+
+function data() {
+	return {
+		breakIt: false,
+	};
+}
+
 export default {
 	name: 'responsive-table',
+	created,
+	computed: {
+		filterColumns,
+	},
+	data,
 	props: {
+		breakPoint: {
+			default: 768,
+			type: Number,
+		},
 		columns: {
 			default: () => [],
 			type: Array,
@@ -38,9 +68,17 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.responsible-table {
+.responsible-table-main {
 	border-collapse: collapse;
 	width: 100%;
 }
-.grid {}
+
+.columns-movil {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+}
+
+.table-movil {
+	display: grid;
+}
 </style>
