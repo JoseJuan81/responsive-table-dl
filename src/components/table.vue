@@ -1,26 +1,31 @@
 <template>
-	<table class="responsible-table-main">
-		<caption data-cy="table-caption">
-			<slot name="caption"></slot>
-		</caption>
-		<thead data-cy="table-head">
-			<tr :class="{ 'columns-movil': breakIt }">
-				<th v-for="(col, indexCol) in filterColumns" :key="indexCol">{{col.title}}</th>
-			</tr>
-		</thead>
-		<tbody data-cy="table-body">
-			<tr
-				v-for="(row, indexRow) in rows"
-				:key="indexRow"
-				:class="{ 'table-movil': breakIt }"
-			>
-				<slot name="row" :row="row" :index="indexRow"></slot>
-			</tr>
-		</tbody>
-		<tfoot data-cy="table-footer">
-			<slot name="footer"></slot>
-		</tfoot>
-	</table>
+	<div class="table-main-container">
+		<table class="wm-table">
+			<caption data-cy="table-caption">
+				<slot name="caption"></slot>
+			</caption>
+			<thead data-cy="table-head">
+				<tr :class="{ 'columns-movil': breakIt }">
+					<th v-for="(col, indexCol) in filterColumns" :key="indexCol">{{col.title}}</th>
+				</tr>
+			</thead>
+			<tbody data-cy="table-body">
+				<tr
+					v-for="(row, indexRow) in rows"
+					:key="indexRow"
+					:class="[
+						'row',
+						{ 'table-movil': breakIt },
+					]"
+				>
+					<slot name="row" :row="row" :index="indexRow"></slot>
+				</tr>
+			</tbody>
+			<tfoot data-cy="table-footer">
+				<slot name="footer"></slot>
+			</tfoot>
+		</table>
+	</div>
 </template>
 <script>
 
@@ -68,14 +73,19 @@ export default {
 };
 </script>
 <style lang="scss" scoped>
-.responsible-table-main {
+table.wm-table {
 	border-collapse: collapse;
 	width: 100%;
 }
+
 
 .columns-movil,
 .table-movil {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
+}
+
+.row {
+	background-color: transparent;
 }
 </style>
