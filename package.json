@@ -2,11 +2,11 @@
   "author": "josejuan81",
   "name": "responsive-table-dl",
   "version": "1.0.2",
-  "main": "dist/table.umd.js",
-  "module": "dist/table.esm.js",
-  "unpkg": "dist/table.min.js",
+  "main": "dist/responsive-table-dl.umd.js",
+  "module": "dist/responsive-table-dl.esm.js",
+  "unpkg": "dist/responsive-table-dl.min.js",
   "browser": {
-    "./sfc": "src/table.vue"
+    "./sfc": "src/responsive-table-dl.vue"
   },
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -16,9 +16,9 @@
     "cy:verify": "cypress verify",
     "cy:open": "cypress open",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/table.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/table.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/table.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/responsive-table-dl.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file dist/responsive-table-dl.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/responsive-table-dl.min.js"
   },
   "dependencies": {
     "core-js": "^3.4.4",

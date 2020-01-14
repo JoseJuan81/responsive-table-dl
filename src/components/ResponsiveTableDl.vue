@@ -50,7 +50,7 @@ function data() {
 }
 
 export default {
-	name: 'responsive-table',
+	name: 'responsive-table-dl',
 	created,
 	computed: {
 		filterColumns,

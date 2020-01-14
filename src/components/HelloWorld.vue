@@ -25,7 +25,7 @@
 </template>
 
 <script>
-import ResponsiveTable from '@/components/table.vue';
+import ResponsiveTable from './ResponsiveTableDl.vue';
 
 function data() {
 	return {

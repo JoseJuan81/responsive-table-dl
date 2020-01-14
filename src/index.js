@@ -1,9 +1,9 @@
-import ResponsiveTable from './components/table.vue';
+import ResponsiveTableDl from './components/ResponsiveTableDl.vue';
 
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('ResponsiveTable', ResponsiveTable);
+	Vue.component('ResponsiveTableDl', ResponsiveTableDl);
 }
 
 const plugin = {
