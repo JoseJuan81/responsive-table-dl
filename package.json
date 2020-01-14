@@ -7,7 +7,6 @@
   "browser": {
     "./sfc": "src/table.vue"
   },
-  "private": true,
   "scripts": {
     "dev": "vue-cli-service serve",
     "prod": "vue-cli-service build",
