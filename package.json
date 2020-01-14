@@ -1,5 +1,6 @@
 {
-  "name": "responsive-table",
+  "author": "josejuan81",
+  "name": "responsive-table-dl",
   "version": "1.0.0",
   "main": "dist/table.umd.js",
   "module": "dist/table.esm.js",

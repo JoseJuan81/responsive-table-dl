@@ -11,7 +11,7 @@ The funtionallity works with <code>display: grid</code> and <code>grid-template-
 
 ## Install
 ```bash
-npm install responsive-table
+npm install responsive-table-dl
 ```
 
 ## Vue Use
@@ -19,14 +19,14 @@ npm install responsive-table
 > in your main.js
 
 ```js
-import ResponsiveTable from 'responsive-table';
+import ResponsiveTable from 'responsive-table-dl';
 Vue.use(ResponsiveTable);
 ```
 ***Local (file.vue)***
 > in your script section
 
 ```js
-import ResponsiveTable from 'responsive-table';
+import ResponsiveTable from 'responsive-table-dl';
 ```
 
 ## Example
