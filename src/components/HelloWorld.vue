@@ -55,6 +55,7 @@ function data() {
 		],
 	};
 }
+
 export default {
 	name: 'HelloWorld',
 	components: {
