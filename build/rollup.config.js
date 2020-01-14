@@ -5,7 +5,7 @@ import buble from '@rollup/plugin-buble'; // Transpile/polyfill with reasonable 
 export default {
 	input: 'src/index.js', // Path relative to package.json
 	output: {
-		name: 'ResponsiveTable',
+		name: 'ResponsiveTableDl',
 		exports: 'named',
 	},
 	plugins: [

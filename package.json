@@ -42,6 +42,9 @@
     "vue-template-compiler": "^2.6.10"
   },
   "keywords": [
-    "table", "web", "movil", "responsive"
+    "table",
+    "web",
+    "movil",
+    "responsive"
   ]
 }

@@ -1,4 +1,4 @@
-import ResponsiveTable from '@/components/table.vue';
+import ResponsiveTable from './components/table.vue';
 
 export function install(Vue) {
 	if (install.installed) return;
@@ -20,4 +20,4 @@ if (GlobalVue) {
 	GlobalVue.use(plugin);
 }
 
-export { ResponsiveTable };
+export default ResponsiveTable;
