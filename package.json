@@ -1,6 +1,6 @@
 {
   "name": "responsive-table",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "main": "dist/table.umd.js",
   "module": "dist/table.esm.js",
   "unpkg": "dist/table.min.js",

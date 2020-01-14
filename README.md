@@ -6,8 +6,13 @@ The funtionallity works with <code>display: grid</code> and <code>grid-template-
 </p>
 <img src="https://travis-ci.org/JoseJuan81/responsive-table.svg?branch=dev">
 
+<img src="./readme-imgs/web.png">
+<img src="./readme-imgs/movil.png">
+
 ## Install
-`npm installl responsive-table`
+```bash
+npm install responsive-table
+```
 
 ## Vue Use
 ***Global***
@@ -36,7 +41,7 @@ in your file.vue
       :rows="rows"
     >
 		<template v-slot:caption><span>Este es el slot del caption</span></template>
-		<template v-slot:row="{ row }">
+		<template v-slot:row="{ row, index }">
 			<td class="cell1">{{row.name}}</td>
 			<td class="cell2">{{row.lastName}}</td>
 			<td class="cell3">{{row.age}}</td>
@@ -94,20 +99,6 @@ export default {
 ```
 ```css
 <style scoped lang="scss">
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
 
 .cell1 {
 	grid-column: 1/2;
@@ -152,3 +143,21 @@ in your App.vue
 	}
 }
 ```
+### Props
+This table use the following props
+
+name | type | value | rules
+:--- | :--- | :--- | :---
+**columns** | `Array` | [{}, {}] | Every array's item must to be an Object with TITLE key ([{ title: 'Nombre' }]). Is required `movil: true` or `movil:false` key:value in every columns' array's object. If `movil: false`, that column will hide in movil version. e.j [{ title: 'Nombre', movil: true }, { title: 'Edad', movil: false }]
+**rows** | `Array` | [{}, {}] | Like **columns**, every array's item must to be an Object.
+**break-point** | `Number` | any (400, 500, ...) | In this point (screen width in pixels) the table change from web to movil version or vice versa.
+
+### Slots
+Avaliable slots
+
+name | description
+:--- | :--- 
+**caption** | This slot is used to define a table caption. Is like a table title. [see here](https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced)
+**row** | This slot is used to define de object's properties to show as cell value. Every row is a rows' item. You can get the row's index if you need it. Is required add classes in every row's property to define the desired position in movil version. See classes `cell1, cell2, cell3, cell4 and actions` in example before.
+**footer** | This slot is used to define information about the data in the table. It Usually used for pagination or totals
+
