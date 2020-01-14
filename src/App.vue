@@ -31,13 +31,13 @@ export default {
 
 		tbody[data-cy="table-body"] {
 
-			tr.row {
+			tr.row-table {
 				border-bottom: 1px solid cornflowerblue;
 			}
-			tr.row:hover {
+			tr.row-table:hover {
 				border: 2px solid cornflowerblue;
 			}
-			tr.row:nth-child(odd) {
+			tr.row-table:nth-child(odd) {
 				background-color: aliceblue !important;
 			}
 		}

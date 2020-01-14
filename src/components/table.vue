@@ -14,7 +14,7 @@
 					v-for="(row, indexRow) in rows"
 					:key="indexRow"
 					:class="[
-						'row',
+						'row-table',
 						{ 'table-movil': breakIt },
 					]"
 				>
@@ -85,7 +85,7 @@ table.wm-table {
 	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
 }
 
-.row {
+.row-table {
 	background-color: transparent;
 }
 </style>
