@@ -97,7 +97,7 @@ export default {
 };
 </script>
 ```
-```css
+```scss
 <style scoped lang="scss">
 
 .cell1 {
@@ -123,26 +123,31 @@ export default {
 </style>
 ```
 in your App.vue
-```css
+```scss
+<style scoped lang="scss">
 .responsive-table.table-main-container {
 
 	table.wm-table {
 
 		tbody[data-cy="table-body"] {
 
-			tr.row {
+			tr.row-table {
 				border-bottom: 1px solid cornflowerblue;
 			}
-			tr.row:hover {
+			tr.row-table:hover {
 				border: 2px solid cornflowerblue;
 			}
-			tr.row:nth-child(odd) {
+			tr.row-table:nth-child(odd) {
 				background-color: aliceblue !important;
 			}
 		}
 	}
 }
+</style>
 ```
+> `.responsive-table` is the class defined out the component by the user. This class is used to modify styles inside the component.
+ 
+> `.table-main-container` and the others below are classes inside the component. The user can change theses classes values to style the table.
 ### Props
 This table use the following props
 
