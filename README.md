@@ -58,7 +58,7 @@ in your file.vue
 ```
 ```js
 <script>
-import ResponsiveTable from '@/components/table.vue';
+import ResponsiveTable from 'responsive-table-dl';
 
 function data() {
 	return {
