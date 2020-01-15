@@ -6,7 +6,7 @@ The funtionallity works with <code>display: grid</code> and <code>grid-template-
 </p>
 <img src="https://travis-ci.org/JoseJuan81/responsive-table.svg?branch=dev">
 
-<img src="./readme-imgs/web.png">
+<img src="https://japi-static.s3.amazonaws.com/japi-sales-error/Captura-de-pantalla-2020-01-14-a-la%28s%29-12.00.47.png">
 <img src="https://japi-static.s3.amazonaws.com/japi-sales-error/Captura-de-pantalla-2020-01-14-a-la%28s%29-12.01.10.png">
 
 ## Install
