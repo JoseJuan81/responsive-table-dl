@@ -25,7 +25,8 @@ script:
   # start server in the background
   - npm run dev &
   # run all Cypress tests and record on the dashboard
-  - npm test -- --record --key 550e45d2-f4cf-49be-848a-e20cf0573c25
+  # - npm test -- --record --key 550e45d2-f4cf-49be-848a-e20cf0573c25
+  - npm test
   # after all tests finish running we need
   # to kill all background jobs (like "npm start &")
   # this avoids flake in Travis jobs
