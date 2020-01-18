@@ -4,7 +4,11 @@ This component can be used in web and movil screens.
 You only have to do few thing to add the right styles.
 The funtionallity works with <code>display: grid</code> and <code>grid-template-columns: repeat(auto-fit, minmax(20px, 1fr))</code> for each table's row.
 </p>
+<p align="center">
 <img src="https://travis-ci.org/JoseJuan81/responsive-table.svg?branch=dev">
+<img alt="GitHub" src="https://img.shields.io/github/license/josejuan81/responsive-table">
+	<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/josejuan81/responsive-table/dev">
+</p>
 
 <img src="https://japi-static.s3.amazonaws.com/japi-sales-error/Captura-de-pantalla-2020-01-14-a-la%28s%29-12.00.47.png">
 <img src="https://japi-static.s3.amazonaws.com/japi-sales-error/Captura-de-pantalla-2020-01-14-a-la%28s%29-12.01.10.png">
