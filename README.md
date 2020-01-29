@@ -7,8 +7,7 @@ The funtionallity works with <code>display: grid</code> and <code>grid-template-
 <p align="center">
 <img src="https://travis-ci.org/JoseJuan81/responsive-table.svg?branch=dev">
 <img alt="GitHub" src="https://img.shields.io/github/license/josejuan81/responsive-table">
-	<img alt="GitHub package.json version (branch)" src="https://img.shields.io/github/package-json/v/josejuan81/responsive-table/dev">
-<img alt="npm" src="https://img.shields.io/npm/dm/responsive-table-dl">
+<img alt="npm" src="https://img.shields.io/npm/dm/responsive-table">
 </p>
 
 <img src="https://japi-static.s3.amazonaws.com/japi-sales-error/Captura-de-pantalla-2020-01-14-a-la%28s%29-12.00.47.png">

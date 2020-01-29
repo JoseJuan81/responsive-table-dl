@@ -1,7 +1,7 @@
 {
   "author": "josejuan81",
   "name": "responsive-table-dl",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "main": "dist/responsive-table-dl.umd.js",
   "module": "dist/responsive-table-dl.esm.js",
   "unpkg": "dist/responsive-table-dl.min.js",
