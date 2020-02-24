@@ -23,8 +23,8 @@ npm install responsive-table-dl
 > in your main.js
 
 ```js
-import ResponsiveTable from 'responsive-table-dl';
-Vue.use(ResponsiveTable);
+import { install } from 'responsive-table-dl';
+Vue.use(install);
 ```
 ***Local (file.vue)***
 > in your script section
