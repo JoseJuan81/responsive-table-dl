@@ -10,6 +10,7 @@ The funtionallity works with <code>display: grid</code> and <code>grid-template-
 <img alt="npm" src="https://img.shields.io/npm/dm/responsive-table">
 </p>
 
+[live example in codePen](https://codepen.io/JOSEJUAN/pen/abvGNKx?editors=1111)
 <img src="https://japi-static.s3.amazonaws.com/japi-sales-error/Captura-de-pantalla-2020-01-14-a-la%28s%29-12.00.47.png">
 <img src="https://japi-static.s3.amazonaws.com/japi-sales-error/Captura-de-pantalla-2020-01-14-a-la%28s%29-12.01.10.png">
 
@@ -30,7 +31,7 @@ Vue.use(install);
 > in your script section
 
 ```js
-import ResponsiveTable from 'responsive-table-dl';
+import responsive-table-dl from 'responsive-table-dl';
 ```
 
 ## Example
@@ -38,31 +39,33 @@ in your file.vue
 
 ```html
 <template>
-	<ResponsiveTable
+  <div id="app" data-cy="app">
+	<responsive-table-dl
       class="responsive-table"
       :break-point="550"
       :columns="columns"
       :rows="rows"
     >
-		<template v-slot:caption><span>Este es el slot del caption</span></template>
-		<template v-slot:row="{ row, index }">
-			<td class="cell1">{{row.name}}</td>
-			<td class="cell2">{{row.lastName}}</td>
-			<td class="cell3">{{row.age}}</td>
-			<td class="cell4">{{row.gender}}</td>
-			<td class="actions">Acciones</td>
-		</template>
-		<template v-slot:footer>
-			<tr>
-				<td colspan="5">Este es el slot del footer</td>
-			</tr>
-		</template>
-	</ResponsiveTable>
+        <template v-slot:caption><span>Este es el slot del caption</span></template>
+        <template v-slot:row="{ row, index }">
+            <td class="cell1">{{row.name}}</td>
+            <td class="cell2">{{row.lastName}}</td>
+            <td class="cell3">{{row.age}}</td>
+            <td class="cell4">{{row.gender}}</td>
+            <td class="actions">Acciones</td>
+        </template>
+        <template v-slot:footer>
+            <tr>
+                <td colspan="5">Este es el slot del footer</td>
+            </tr>
+        </template>
+	</responsive-table-dl>
+  </div>
 </template>
 ```
 ```js
 <script>
-import ResponsiveTable from 'responsive-table-dl';
+import responsiveTableDl from '@/components/responsive-table-dl.vue';
 
 function data() {
 	return {
@@ -92,60 +95,64 @@ function data() {
 		],
 	};
 }
+
 export default {
-	name: 'some-component',
+	name: 'app',
 	components: {
-		ResponsiveTable,
+		responsiveTableDl,
 	},
 	data,
 };
 </script>
 ```
 ```scss
-<style scoped lang="scss">
+<style lang="scss">
+#app {
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+  margin-top: 60px;
+}
 
-.cell1 {
-	grid-column: 1/2;
-	grid-row: 1;
-}
-.cell2 {
-	grid-column: 1/2;
-	grid-row: 2;
-}
-.cell3 {
-	grid-column: 2/3;
-	grid-row: 1;
-}
-.cell4 {
-	grid-column: 2/3;
-	grid-row: 2;
-}
-.actions {
-	grid-column: 3/4;
-	grid-row: 1;
-}
-</style>
-```
-in your App.vue
-```scss
-<style scoped lang="scss">
 .responsive-table.table-main-container {
 
-	table.wm-table {
+	table.wm-table-dl {
 
 		tbody[data-cy="table-body"] {
 
-			tr.row-table {
+			tr.row-table-dl {
 				border-bottom: 1px solid cornflowerblue;
 			}
-			tr.row-table:hover {
+			tr.row-table-dl:hover {
 				border: 2px solid cornflowerblue;
 			}
-			tr.row-table:nth-child(odd) {
+			tr.row-table-dl:nth-child(odd) {
 				background-color: aliceblue !important;
 			}
 		}
 	}
+}
+.cell1 {
+    grid-column: 1/2;
+    grid-row: 1;
+}
+.cell2 {
+    grid-column: 1/2;
+    grid-row: 2;
+}
+.cell3 {
+    grid-column: 2/3;
+    grid-row: 1;
+}
+.cell4 {
+    grid-column: 2/3;
+    grid-row: 2;
+}
+.actions {
+    grid-column: 3/4;
+    grid-row: 1;
 }
 </style>
 ```
