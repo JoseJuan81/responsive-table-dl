@@ -1,11 +1,11 @@
 <template>
 	<div class="table-main-container">
-		<table class="wm-table">
+		<table class="wm-table-dl">
 			<caption data-cy="table-caption">
 				<slot name="caption"></slot>
 			</caption>
 			<thead data-cy="table-head">
-				<tr :class="{ 'columns-movil': breakIt }">
+				<tr :class="{ 'columns-movil-dl': breakIt }">
 					<th v-for="(col, indexCol) in filterColumns" :key="indexCol">{{col.title}}</th>
 				</tr>
 			</thead>
@@ -14,8 +14,8 @@
 					v-for="(row, indexRow) in rows"
 					:key="indexRow"
 					:class="[
-						'row-table',
-						{ 'table-movil': breakIt },
+						'row-table-dl',
+						{ 'table-movil-dl': breakIt },
 					]"
 				>
 					<slot name="row" :row="row" :index="indexRow"></slot>
@@ -72,20 +72,20 @@ export default {
 	},
 };
 </script>
-<style lang="scss" scoped>
-table.wm-table {
+<style lang="scss">
+table.wm-table-dl {
 	border-collapse: collapse;
 	width: 100%;
 }
 
 
-.columns-movil,
-.table-movil {
+.columns-movil-dl,
+.table-movil-dl {
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(20px, 1fr));
 }
 
-.row-table {
+.row-table-dl {
 	background-color: transparent;
 }
 </style>
