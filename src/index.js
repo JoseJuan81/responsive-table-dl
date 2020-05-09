@@ -1,9 +1,9 @@
-import ResponsiveTableDl from './components/ResponsiveTableDl.vue';
+import ResponsiveTableDl from './components/responsive-table-dl.vue';
 
 export function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
-	Vue.component('ResponsiveTableDl', ResponsiveTableDl);
+	Vue.component('responsive-table-dl', ResponsiveTableDl);
 }
 
 const plugin = {
@@ -20,4 +20,4 @@ if (GlobalVue) {
 	GlobalVue.use(plugin);
 }
 
-export default ResponsiveTable;
+export default ResponsiveTableDl;

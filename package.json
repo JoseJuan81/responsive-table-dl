@@ -1,12 +1,12 @@
 {
   "author": "josejuan81",
   "name": "responsive-table-dl",
-  "version": "1.0.8",
-  "main": "dist/responsive-table-dl.umd.js",
-  "module": "dist/responsive-table-dl.esm.js",
-  "unpkg": "dist/responsive-table-dl.min.js",
+  "version": "1.0.10",
+  "main": "lib/responsive-table-dl.umd.js",
+  "module": "lib/responsive-table-dl.esm.js",
+  "unpkg": "lib/responsive-table-dl.min.js",
   "browser": {
-    "./sfc": "src/responsive-table-dl.vue"
+    "./sfc": "./src/components/responsive-table-dl.vue"
   },
   "scripts": {
     "dev": "vue-cli-service serve",
@@ -16,27 +16,27 @@
     "cy:verify": "cypress verify",
     "cy:open": "cypress open",
     "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
-    "build:umd": "rollup --config build/rollup.config.js --format umd --file dist/responsive-table-dl.umd.js",
-    "build:es": "rollup --config build/rollup.config.js --format es --file dist/responsive-table-dl.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file dist/responsive-table-dl.min.js"
+    "build:umd": "rollup --config build/rollup.config.js --format umd --file lib/responsive-table-dl.umd.js",
+    "build:es": "rollup --config build/rollup.config.js --format es --file lib/responsive-table-dl.esm.js",
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file lib/responsive-table-dl.min.js"
   },
   "dependencies": {
-    "core-js": "^3.4.4",
+    "core-js": "^3.6.5",
     "dotenv": "8.2.0",
     "vue": "^2.6.10"
   },
   "devDependencies": {
     "@rollup/plugin-buble": "0.21.0",
     "@rollup/plugin-commonjs": "11.0.1",
-    "@vue/cli-plugin-babel": "^4.1.0",
-    "@vue/cli-plugin-eslint": "^4.1.0",
-    "@vue/cli-service": "^4.1.0",
+    "@vue/cli-plugin-babel": "^4.3.1",
+    "@vue/cli-plugin-eslint": "^4.3.1",
+    "@vue/cli-service": "^4.3.1",
     "@vue/eslint-config-airbnb": "^4.0.0",
-    "babel-eslint": "^10.0.3",
+    "babel-eslint": "^10.1.0",
     "cypress": "3.8.2",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "node-sass": "^4.12.0",
+    "node-sass": "^4.14.1",
     "rollup-plugin-vue": "5.1.5",
     "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
