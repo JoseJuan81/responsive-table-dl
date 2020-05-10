@@ -18,7 +18,7 @@ describe('Pruebas a tabla responsiva versión MOVIL', () => {
 		cy.get('[data-cy="table-head"]')
 			.should('exist')
 			.find('tr')
-			.should('have.class', 'columns-movil')
+			.should('have.class', 'columns-movil-dl')
 			.children()
 			.should('have.length', 3);
 	})
