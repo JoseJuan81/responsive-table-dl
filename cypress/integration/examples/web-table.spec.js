@@ -17,7 +17,7 @@ describe('Pruebas a tabla responsiva versión WEB', () => {
 		cy.get('[data-cy="table-head"]')
 			.should('exist')
 			.find('tr')
-			.should('not.have.class', 'columns-movil')
+			.should('not.have.class', 'columns-movil-dl')
 			.children()
 			.should('have.length', 5);
 	})
@@ -25,21 +25,21 @@ describe('Pruebas a tabla responsiva versión WEB', () => {
 		cy.get('[data-cy="table-body"]')
 			.should('exist')
 			.find('tr')
-			.should('not.have.class', 'table-movil')
+			.should('not.have.class', 'table-movil-dl')
 			.eq(0)
 			.invoke('css', 'background-color')
 			.should('equal', 'rgb(240, 248, 255)');
 		cy.get('[data-cy="table-body"]')
 			.should('exist')
 			.find('tr')
-			.should('not.have.class', 'table-movil')
+			.should('not.have.class', 'table-movil-dl')
 			.eq(1)
 			.invoke('css', 'background-color')
 			.should('equal', 'rgba(0, 0, 0, 0)');
 		cy.get('[data-cy="table-body"]')
 			.should('exist')
 			.find('tr')
-			.should('not.have.class', 'table-movil')
+			.should('not.have.class', 'table-movil-dl')
 			.eq(0)
 			.children()
 			.should('have.length', 5);
