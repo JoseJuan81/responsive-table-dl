@@ -29,7 +29,7 @@
 </template>
 <script>
 
-function created() {
+function mounted() {
 	this.breakIt = window.innerWidth <= this.breakPoint;
 	window.addEventListener('resize', () => {
 		this.breakIt = window.innerWidth <= this.breakPoint;
@@ -51,11 +51,11 @@ function data() {
 
 export default {
 	name: 'responsive-table-dl',
-	created,
 	computed: {
 		filterColumns,
 	},
 	data,
+	mounted,
 	props: {
 		breakPoint: {
 			default: 768,

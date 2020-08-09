@@ -1,7 +1,7 @@
 {
   "author": "josejuan81",
   "name": "responsive-table-dl",
-  "version": "1.0.13",
+  "version": "1.0.14",
   "main": "lib/responsive-table-dl.umd.js",
   "module": "lib/responsive-table-dl.esm.js",
   "unpkg": "lib/responsive-table-dl.min.js",
@@ -15,10 +15,11 @@
     "test": "cypress run",
     "cy:verify": "cypress verify",
     "cy:open": "cypress open",
-    "build": "npm run build:umd & npm run build:es & npm run build:unpkg",
+    "build": "npm run build:umd & npm run build:es & npm run build:unpkg & npm run build:ssr",
     "build:umd": "rollup --config build/rollup.config.js --format umd --file lib/responsive-table-dl.umd.js",
     "build:es": "rollup --config build/rollup.config.js --format es --file lib/responsive-table-dl.esm.js",
-    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file lib/responsive-table-dl.min.js"
+    "build:unpkg": "rollup --config build/rollup.config.js --format iife --file lib/responsive-table-dl.min.js",
+    "build:ssr": "SSR=true rollup --config build/rollup.config.js --format cjs --file lib/ssr.js"
   },
   "dependencies": {
     "core-js": "^3.6.5",
